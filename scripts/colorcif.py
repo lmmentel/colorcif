@@ -14,6 +14,8 @@ from ase.data.colors import jmol_colors
 WHITE = (1.000, 1.000, 1.000)
 LGRAY = (0.800, 0.800, 0.800)
 
+COLORMAPS = [m for m in cm.datad.keys() if not m.endswith("_r")]
+
 def hsv2rgb(h, s, v):
     """http://en.wikipedia.org/wiki/HSL_and_HSV
 
@@ -68,10 +70,8 @@ def get_colors(cmap, array):
         rgb[:] = cm(x)[:3]
     return result
 
+def parse_arguments(arguments=None):
 
-def main():
-
-    colormaps = [m for m in cm.datad.keys() if not m.endswith("_r")]
     parser = argparse.ArgumentParser()
     parser.add_argument("cif", help="cif file")
     parser.add_argument("-t", "--texture",
@@ -84,12 +84,27 @@ def main():
                         action="store_true",
                         help="highlight only atoms that are NOT T-atoms")
     parser.add_argument("-c", "--colormap",
-                        choices=colormaps,
+                        choices=COLORMAPS,
                         default=None, help="matplotlib colormap see: http://wiki.scipy.org/Cookbook/Matplotlib/Show_colormaps")
     parser.add_argument("-o", "--output",
                         help="name of the output file",
                         default=None)
-    args = parser.parse_args()
+    parser.add_argument("-x",
+                        default="0",
+                        help="angle of rotation around the x axis")
+    parser.add_argument("-y",
+                        default="0",
+                        help="angle of rotation around the y axis")
+    parser.add_argument("-z",
+                        default="0",
+                        help="angle of rotation around the z axis")
+
+    if arguments is not None:
+        return parser.parse_args(arguments)
+    else:
+        return parser.parse_args()
+
+def generate_image(args):
 
     if args.output is None:
         args.output = os.path.splitext(args.cif)[0] + '.pov'
@@ -100,7 +115,8 @@ def main():
 
     mol.set_tags(sg.tag_sites(mol.get_scaled_positions()))
 
-    rotation = '0x, 0y, 0z' # found using ase-gui menu 'view -> rotate'
+    # found using ase-gui menu 'view -> rotate'
+    rotation = '{x}x, {y}y, {z}z'.format(x=args.x, y=args.y, z=args.z)
 
     natoms = np.shape(mol.get_positions())[0]
 
@@ -176,6 +192,11 @@ def main():
 
     # Make the raytraced image
     ase.io.write(args.output, mol, run_povray=True, **kwargs)
+
+def main():
+
+    args = parse_arguments()
+    generate_image(args)
 
 if __name__ == "__main__":
     main()
