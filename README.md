@@ -3,6 +3,15 @@
 A small utility python script to generate high-quality images from cif files
 with symmetry unique atoms colored with different colors
 
+
+## Dependencies
+
+First make sure you have the following dependencies installed:
+
+* [ase](https://wiki.fysik.dtu.dk/ase/)
+* [numpy](http://www.numpy.org/)
+* [matplotlib]
+
 ## Installation
 
 After downloading and unpacking or cloning the repository run the standard
@@ -72,12 +81,6 @@ rotate the unit cell 30 degrees with respect to each (x, y, z) axes and the
 [ton_gist_rainbow_O]: https://bytebucket.org/lukaszmentel/colorcif/raw/tip/example/gfx/ton_gist_rainbow_O.png "TON gist_rainbow O-atoms"
 [ton_gist_rainbow_glass_O]: https://bytebucket.org/lukaszmentel/colorcif/raw/tip/example/gfx/ton_gist_rainbow_glass_O.png "TON gist_rainbow glass O-atoms"
 
-## Dependencies
-
-
-* [ase](https://wiki.fysik.dtu.dk/ase/)
-* [numpy](http://www.numpy.org/)
-* [matplotlib]
 
 [matplotlib]: http://matplotlib.org/
 
@@ -88,24 +91,24 @@ The script is based on the example from the [ase documentation](https://wiki.fys
 
 ## License
 
-    The MIT License (MIT)
+  The MIT License (MIT)
 
-    Copyright (c) 2015 Lukasz Mentel
+  Copyright (c) 2015 Lukasz Mentel
 
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
 
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
