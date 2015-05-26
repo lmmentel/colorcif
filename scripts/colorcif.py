@@ -98,7 +98,10 @@ def parse_arguments(arguments=None):
     parser.add_argument("-z",
                         default="0",
                         help="angle of rotation around the z axis")
-
+    parser.add_argument("-w", "--width",
+                        default=400,
+                        type=int,
+                        help="width of the image")
     if arguments is not None:
         return parser.parse_args(arguments)
     else:
@@ -168,7 +171,7 @@ def generate_image(args):
     'display'      : False, # Display while rendering
     'pause'        : False, # Pause when done rendering (only if display)
     'transparent'  : False, # Transparent background
-    'canvas_width' : 400,  # Width of canvas in pixels
+    'canvas_width' : args.width,  # Width of canvas in pixels
     'canvas_height': None,  # Height of canvas in pixels
     'camera_dist'  : 50.,   # Distance from camera to front atom
     'image_plane'  : None,  # Distance from front atom to image plane
