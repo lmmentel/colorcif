@@ -9,7 +9,7 @@ with symmetry unique atoms colored with different colors
 
 * color all symmetry unique atoms
 
-  ```bash
+  ```{r, engine='bash'}
   colorcif.py TON.cif -o ton_default.pov
   ```
 
@@ -17,7 +17,7 @@ with symmetry unique atoms colored with different colors
 
 
 
-[ton_default]: "TON default"
+[ton_default]: https://bytebucket.org/lukaszmentel/colorcif/raw/tip/example/gfx/ton_default.png "TON default"
 
 
 
