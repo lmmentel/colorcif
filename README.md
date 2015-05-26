@@ -41,7 +41,7 @@ rotate the unit cell 30 degrees with respect to each (x, y, z) axes
   ![TON image][ton_gist_rainbow_O]
 
 [ton_default]: https://bytebucket.org/lukaszmentel/colorcif/raw/tip/example/gfx/ton_default.png "TON default all atoms"
-[ton_RdYlRn_T]: https://bytebucket.org/lukaszmentel/colorcif/raw/tip/example/gfx/ton_RdYlGn_T.png "TON RdYlGn T-atoms"
+[ton_RdYlGn_T]: https://bytebucket.org/lukaszmentel/colorcif/raw/tip/example/gfx/ton_RdYlGn_T.png "TON RdYlGn T-atoms"
 [ton_RdYlBu_O]: https://bytebucket.org/lukaszmentel/colorcif/raw/tip/example/gfx/ton_RdYlBu_O.png "TON RdYlbu O-atoms"
 [ton_gist_rainbow_O]: https://bytebucket.org/lukaszmentel/colorcif/raw/tip/example/gfx/ton_gist_rainbow_O.png "TON gist_rainbow O-atoms"
 
