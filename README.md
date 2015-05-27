@@ -34,34 +34,34 @@ colorcif.py -h
 
 * color all symmetry unique atoms
 
-  ```
-  colorcif.py TON.cif -o ton_default.pov
-  ```
+```
+colorcif.py TON.cif -o ton_default.pov
+```
 
   ![TON image][ton_default]
 
 * color only T-atoms using `RdYlGn` colormap from [matplotlib]
 
-  ```
-  colorcif.py -T -c RdYlGn -o ton_RdYlGn_T.pov TON.cif
-  ```
+```
+colorcif.py -T -c RdYlGn -o ton_RdYlGn_T.pov TON.cif
+```
 
   ![TON image][ton_RdYlGn_T]
 
 * color only oxygen atoms using `RdYlBu` colormap from [matplotlib]
 
-  ```
-  colorcif.py -O -c RdYlBu -o ton_RdYlBu_O.pov TON.cif
-  ```
+```
+colorcif.py -O -c RdYlBu -o ton_RdYlBu_O.pov TON.cif
+```
 
   ![TON image][ton_RdYlBu_O]
 
 * color only oxygen atoms using `gist_rainbow` colormap from [matplotlib] and
 rotate the unit cell 30 degrees with respect to each (x, y, z) axes
 
-  ```
-  colorcif.py -O -c gist_rainbow -o ton_gist_rainbow_O.pov -x 30 -y 30 -z 30 TON.cif
-  ```
+```
+colorcif.py -O -c gist_rainbow -o ton_gist_rainbow_O.pov -x 30 -y 30 -z 30 TON.cif
+```
 
   ![TON image][ton_gist_rainbow_O]
 
